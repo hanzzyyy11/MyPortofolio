@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Battle</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar floating-nav">
+  <div class="logo">
+    <img src="png/logo.png" alt="Knowledge Battle Logo">
+  </div>
+
+  <div class="nav-pills">
+    <span class="pill primary">Dukungan 24/7 Terpercaya</span>
+    <span class="pill secondary">Paling Populer</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Fitur</a>
+    <a href="#">Kontak</a>
+  </nav>
+</header>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
