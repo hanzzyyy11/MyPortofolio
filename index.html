@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Battle</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="png/logo.png">
+</head>
+<body>
+
+<header class="navbar floating-nav">
+  <div class="logo">
+    <img src="png/logo.png" alt="Knowledge Battle Logo">
+  </div>
+
+  <nav id="navMenu">
+    <a href="#">Beranda</a>
+    <a href="#">Tentang</a>
+    <a href="#">Fitur</a>
+    <a href="#">Kontak</a>
+    <a href="#" class="btn btn-outline">Masuk</a>
+    <a href="#" class="btn btn-primary">Daftar</a>
+  </nav>
+
+  <div class="nav-pills">
+    <span class="pill primary">Dukungan 24/7 Terpercaya</span>
+    <span class="pill secondary">Paling Populer</span>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+</header>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
