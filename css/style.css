@@ -280,6 +280,41 @@ nav a:hover {
   z-index: 9999;
 }
 
+.hamburger::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 3px;
+  height: 0;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #ff3b3b,
+    transparent
+  );
+
+  border-radius: 3px;
+  opacity: 0;
+  transition: height 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger:hover::after {
+  height: 70%;
+  opacity: 1;
+}
+
+.hamburger:hover span {
+  box-shadow: 0 0 8px rgba(255,59,59,0.6);
+}
+
+.hamburger.active {
+  filter: drop-shadow(0 0 10px rgba(255,59,59,0.8));
+}
+
 .hamburger span {
   height: 3px;
   width: 100%;
