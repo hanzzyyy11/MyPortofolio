@@ -580,7 +580,7 @@ footer::before {
     display: flex;
     order: 2;       
     margin-top: 9px;
-    transform: translateY(24px);
+    transform: translateY(32px);
     width: 130px;   
     height: 130px;
   }
