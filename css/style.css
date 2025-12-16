@@ -431,7 +431,10 @@ nav a:hover {
 }
 
 .hero-logo:active {
-  filter: brightness(0.95);
+  transform: scale(0.96);
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.15),
+    0 0 22px rgba(255,59,59,0.6);
 }
 
 .hero-logo img {
@@ -697,5 +700,19 @@ footer::before {
   padding-right: 220px;
   white-space: normal;
   overflow-wrap: break-word;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-logo:hover {
+    box-shadow:
+      0 0 0 3px rgba(255,255,255,0.15),
+      0 0 30px rgba(255,59,59,0.85);
+    filter: brightness(1.08);
+  }
+
+  .hero-logo:hover::before,
+  .hero-logo:hover::after {
+    opacity: 1;
   }
 }
