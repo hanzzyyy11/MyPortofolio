@@ -788,3 +788,18 @@ footer::before {
   filter: blur(2px);
   pointer-events: none;
 }
+
+.parallax-bg {
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(90,120,255,0.18), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(255,59,59,0.12), transparent 45%);
+
+  filter: blur(30px);
+  transform: translateY(0);
+  transition: transform 0.05s linear;
+  pointer-events: none;
+}
