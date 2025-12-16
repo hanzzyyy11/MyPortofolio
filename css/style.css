@@ -314,6 +314,14 @@ nav a:hover {
   margin-bottom: 16px;
 }
 
+@media (min-width: 769px) {
+  .hero h1 {
+    order: 1;
+    margin-bottom: 8px; 
+    line-height: 1.15;
+  }
+}
+
 .hero h1 .iam {
   color: #ff3b3b;
 }
@@ -323,6 +331,12 @@ nav a:hover {
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 520px;
+}
+
+@media (min-width: 769px) {
+  .hero p {
+    margin-top: -4px;
+  }
 }
 
 .hero-head {
