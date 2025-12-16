@@ -791,15 +791,15 @@ footer::before {
 
 .parallax-bg {
   position: fixed;
-  inset: -20%;
+  inset: -30%;
   z-index: -1;
 
   background:
-    radial-gradient(circle at 20% 20%, rgba(90,120,255,0.18), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(255,59,59,0.12), transparent 45%);
+    radial-gradient(circle at 20% 20%, rgba(90,120,255,0.14), transparent 45%),
+    radial-gradient(circle at 80% 60%, rgba(255,59,59,0.10), transparent 50%);
 
-  filter: blur(30px);
+  filter: blur(40px);
   transform: translateY(0);
-  transition: transform 0.05s linear;
+  will-change: transform;
   pointer-events: none;
 }
