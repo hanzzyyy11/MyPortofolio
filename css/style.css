@@ -583,7 +583,7 @@ footer::before {
     width: 160px;   
     height: 160px;
 
-    --base-y: 18px;
+    --base-y: 16px;
     animation: floatLogo 4s ease-in-out infinite;
   }
 
