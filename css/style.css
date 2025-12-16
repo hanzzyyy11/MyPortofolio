@@ -98,8 +98,9 @@ body::before {
 }
 
 .floating-nav {
-  position: relative;
-  isolation: isolate;
+  max-width: 1100px;
+  width: calc(100% - 24px); 
+  margin: 0 auto;
 
   background: rgba(20, 30, 60, 0.28);
   backdrop-filter: blur(18px);
