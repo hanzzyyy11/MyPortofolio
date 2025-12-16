@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// ===== RAIN BACKGROUND =====
 const canvas = document.getElementById("bg-particles");
 const ctx = canvas.getContext("2d");
 
@@ -55,47 +56,42 @@ function resize() {
 window.addEventListener("resize", resize);
 resize();
 
-// ===== PARTICLE SETTINGS =====
-const particles = [];
-const COUNT = 80;
+const drops = [];
+const DROP_COUNT = 120;
 
-for (let i = 0; i < COUNT; i++) {
-  particles.push({
+for (let i = 0; i < DROP_COUNT; i++) {
+  drops.push({
     x: Math.random() * w,
     y: Math.random() * h,
-    r: Math.random() * 2 + 1,
-    vx: (Math.random() - 0.5) * 0.3,
-    vy: (Math.random() - 0.5) * 0.3,
-    alpha: Math.random(),
-    glow: Math.random() > 0.5 ? "cyan" : "red"
+    len: Math.random() * 20 + 10,
+    speed: Math.random() * 4 + 2,
+    opacity: Math.random() * 0.4 + 0.2
   });
 }
 
-function draw() {
+function rain() {
   ctx.clearRect(0, 0, w, h);
 
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-
-    if (p.x < 0 || p.x > w) p.vx *= -1;
-    if (p.y < 0 || p.y > h) p.vy *= -1;
-
+  drops.forEach(d => {
     ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.moveTo(d.x, d.y);
+    ctx.lineTo(d.x, d.y + d.len);
 
-    const color =
-      p.glow === "cyan"
-        ? `rgba(90,220,255,${p.alpha})`
-        : `rgba(255,80,80,${p.alpha})`;
+    ctx.strokeStyle = `rgba(120,180,255,${d.opacity})`;
+    ctx.lineWidth = 1;
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = "rgba(120,180,255,0.6)";
+    ctx.stroke();
 
-    ctx.fillStyle = color;
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = color;
-    ctx.fill();
+    d.y += d.speed;
+
+    if (d.y > h) {
+      d.y = -d.len;
+      d.x = Math.random() * w;
+    }
   });
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(rain);
 }
 
-draw();
+rain();
