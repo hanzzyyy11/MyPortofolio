@@ -44,6 +44,27 @@ body::before {
   pointer-events: none;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: -2;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0,255,255,0.18), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(255,0,80,0.15), transparent 50%);
+
+  animation: fogMove 30s ease-in-out infinite;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-10%, -5%); }
+  100% { transform: translate(0,0); }
+}
+
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
