@@ -580,10 +580,10 @@ footer::before {
     display: flex;
     order: 2;       
     margin-top: 24px;
-    width: 150px;   
-    height: 150px;
+    width: 160px;   
+    height: 160px;
 
-    --base-y: 20px;
+    --base-y: 18px;
     animation: floatLogo 4s ease-in-out infinite;
   }
 
