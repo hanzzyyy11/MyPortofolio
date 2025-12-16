@@ -579,8 +579,8 @@ footer::before {
   .hero-logo {
     display: flex;
     order: 2;       
-    margin-top: 6px;
-    transform: translateY(14px);
+    margin-top: 9px;
+    transform: translateY(24px);
     width: 130px;   
     height: 130px;
   }
