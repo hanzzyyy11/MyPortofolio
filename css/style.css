@@ -44,12 +44,6 @@ body::before {
   pointer-events: none;
 }
 
-@keyframes fogMove {
-  0% { transform: translate(0,0); }
-  50% { transform: translate(-10%, -5%); }
-  100% { transform: translate(0,0); }
-}
-
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -813,20 +807,6 @@ footer::before {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .hero-logo:hover {
-    box-shadow:
-      0 0 0 3px rgba(255,255,255,0.15),
-      0 0 30px rgba(255,59,59,0.85);
-    filter: brightness(1.08);
-  }
-
-  .hero-logo:hover::before,
-  .hero-logo:hover::after {
-    opacity: 1;
-  }
-}
-
 /* ===== MOBILE HERO CENTER ===== */
 @media (max-width: 768px) {
 
@@ -877,6 +857,81 @@ footer::before {
     box-shadow:
     0 0 0 1px rgba(90,120,255,0.35),
     0 0 22px rgba(90,120,255,0.35);
+  }
+}
+
+/* ===== HERO CTA (2 KOTAK) ===== */
+.hero-cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* CTA CARD */
+.cta-card {
+  position: relative;
+  padding: 14px 12px;
+  text-align: center;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5ff;
+  text-decoration: none;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(90,120,255,0.55);
+
+  box-shadow:
+    0 0 0 1px rgba(90,120,255,0.25),
+    0 0 18px rgba(90,120,255,0.25);
+
+  transition: all .3s ease;
+}
+
+/* GLOW */
+.cta-card::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    circle,
+    rgba(90,120,255,0.45),
+    transparent 70%
+  );
+
+  opacity: 0;
+  filter: blur(16px);
+  z-index: -1;
+  transition: opacity .3s ease;
+}
+
+/* HOVER */
+.cta-card:hover {
+  color: #fff;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 0 1px rgba(90,120,255,0.45),
+    0 0 30px rgba(90,120,255,0.55);
+}
+
+.cta-card:hover::after {
+  opacity: 1;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .hero-cta {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
