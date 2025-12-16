@@ -561,10 +561,10 @@ footer::before {
 
 @keyframes floatLogo {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(var(--base-y));
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(calc(var(--base-y) - 6px));
   }
 }
 
@@ -579,10 +579,12 @@ footer::before {
   .hero-logo {
     display: flex;
     order: 2;       
-    margin-top: 9px;
-    transform: translateY(32px);
+    margin-top: 24px;
     width: 130px;   
     height: 130px;
+
+    --base-y: 24px;
+    animation: floatLogo 4s ease-in-out infinite;
   }
 
   .hero h1 {
