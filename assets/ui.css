@@ -2,16 +2,90 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: #0b0b0f;
-  color: #fff;
-  overflow-x: hidden;
+body {
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+
+  /* PENTING: UI HARUS DI ATAS BACKGROUND */
+  position: relative;
+  z-index: 1;
 }
 
+/* SEMUA SECTION UI */
+section,
+header,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT DEFAULT */
+p {
+  color: #cbd5ff;
+  line-height: 1.6;
+}
+
+/* ===== SUBTITLE ===== */
+.subtitle {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  color: #aefcff;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* GARIS BAWAH SUBTITLE */
+.subtitle::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-top: 8px;
+
+  background: linear-gradient(
+    90deg,
+    #00ffff,
+    rgba(0,255,255,0.2)
+  );
+
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+
+/* ===== GLASS UI CARD (GLOBAL) ===== */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,0.25);
+
+  box-shadow:
+    0 0 0 1px rgba(0,255,255,0.15),
+    0 0 24px rgba(0,255,255,0.25);
+}
+
+/* ===== GLOBAL LINKS ===== */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+
+/* ===== FOOTER BASIC ===== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 12px;
+  color: #9fbfff;
+  padding: 20px 16px;
 }
