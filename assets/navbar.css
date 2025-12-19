@@ -47,39 +47,37 @@
   gap: 12px;
 }
 
-/* MOBILE MENU BASE */
+/* ===== MOBILE MENU ===== */
 .mobile-menu {
-  position: absolute;
-  top: calc(100% + 14px);
-  right: 0;
+  position: fixed;
+  top: 70px; /* tinggi navbar */
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
 
-  background: rgba(10, 15, 25, 0.75);
+  width: calc(100% - 32px);
+  max-width: 420px;
+
+  background: rgba(10, 20, 30, 0.9);
   backdrop-filter: blur(14px);
 
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+
   border-radius: 16px;
-  padding: 12px;
+  padding: 16px;
 
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
-
-  display: none;
+  display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+  z-index: 9998;
 }
 
-.mobile-menu .menu-item {
-  color: #eaffff;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 8px 12px;
-  border-radius: 10px;
-}
-
-.mobile-menu .menu-item:hover,
-.mobile-menu .menu-item.active {
-  background: rgba(0, 255, 255, 0.15);
-}
-
+/* MENU AKTIF */
 .mobile-menu.active {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
