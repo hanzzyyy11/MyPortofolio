@@ -32,6 +32,7 @@
   }
 
   .logo-text {
+    display: none;
     font-size: 16px;
   }
 
