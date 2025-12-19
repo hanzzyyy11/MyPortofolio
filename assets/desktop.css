@@ -12,6 +12,10 @@
     font-size: 1.05rem;
   }
 
+  .hero-logo {
+    display: none;
+  }
+
   .hero-cta {
     grid-template-columns: repeat(2, 220px);
     justify-content: center;
