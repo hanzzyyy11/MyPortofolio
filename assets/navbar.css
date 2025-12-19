@@ -79,3 +79,25 @@
 .mobile-menu .menu-item.active {
   background: rgba(0, 255, 255, 0.15);
 }
+
+.mobile-menu.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* ITEM */
+.mobile-menu .menu-item {
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.3s ease;
+}
+
+.mobile-menu .menu-item:hover {
+  background: rgba(0, 255, 255, 0.15);
+}
