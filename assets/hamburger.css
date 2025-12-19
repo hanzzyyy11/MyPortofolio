@@ -1,6 +1,6 @@
 .hamburger {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
 
-  border-radius: 15%;
+  border-radius: 35%;
   box-shadow:
     0 0 15px rgba(0,255,255,0.6),
     inset 0 0 10px rgba(0, 255, 255, 0.1);
