@@ -25,6 +25,20 @@
   z-index: 999;
 }
 
+.logo img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;     
+  object-fit: cover;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 15px;
+  display: none;
+  color: #eaffff;
+}
+
 /* LEFT SIDE */
 .nav-left {
   display: flex;
