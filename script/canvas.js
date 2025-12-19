@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+/* ===== BACKGROUND ===== */
 const canvas = document.getElementById("bg-particles");
 const ctx = canvas.getContext("2d");
 
