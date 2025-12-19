@@ -1,20 +1,28 @@
 .navbar {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px);
-  max-width: 1100px;
-  padding: 12px 16px;
-  border-radius: 16px;
-  background: rgba(20,20,30,0.7);
-  backdrop-filter: blur(12px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  justify-content: space-between;
+
+  padding: 12px 16px;
+  margin: 12px auto;
+
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+
+  max-width: 1100px;
+  width: calc(100% - 24px);
+
+  background: rgba(20, 30, 60, 0.35);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+
+  box-shadow:
+    0 0 0 1px rgba(90,180,255,0.25),
+    0 10px 30px rgba(0,0,0,0.45);
 }
 
+/* KIRI */
 .nav-left {
   display: flex;
   align-items: center;
@@ -22,9 +30,38 @@
 }
 
 .logo img {
-  width: 32px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }
 
+/* TEXT LOGO */
 .logo-text {
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* ===== DESKTOP MENU ===== */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .menu-item {
+    color: #cbd5ff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .menu-item:hover {
+    color: #fff;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
