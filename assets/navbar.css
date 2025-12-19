@@ -54,13 +54,21 @@
     left: 12px;
     right: 12px;
 
-    background: #0e152b;
-    border-radius: 16px;
-    padding: 14px;
-
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    padding: 14px;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+    border: 2px solid rgba(0,255,255,0.2);
+  box-shadow:
+    0 0 15px rgba(0,255,255,0.6),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
 
     opacity: 0;
     transform: translateY(-10px);
@@ -80,14 +88,18 @@
   .menu-item {
     padding: 14px;
     border-radius: 12px;
-    background: #141c3a;
+    background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     color: #cbd5ff;
     text-align: center;
     text-decoration: none;
   }
 
   .menu-item.active {
-    background: linear-gradient(135deg, #4f7cff, #6a8dff);
+    background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     color: #fff;
   }
 
