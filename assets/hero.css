@@ -100,18 +100,15 @@
   text-align: center;
   border-radius: 14px;
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(0,255,255,0.2);
-
+  border: 2px solid rgba(0,255,255,0.2);
   box-shadow:
-    0 0 0 1px rgba(0,255,255,0.6),
-    0 0 18px rgba(90,120,255,0.35);
+    0 0 15px rgba(0,255,255,0.6),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .cta-card:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 0 40px rgba(255,45,45,0.6);
+  box-shadow: 0 0 15px rgba(0,255,255,0.6);
 }
