@@ -1,0 +1,13 @@
+.stats {
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.stat {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  text-align: center;
+}
