@@ -40,11 +40,11 @@ p {
   position: relative;
 }
 
-/* GARIS BAWAH SUBTITLE */
+/* GARIS SUBTITLE */
 .subtitle::after {
   content: "";
   display: block;
-  width: 190px;
+  width: 210px;
   height: 4px;
   margin-top: 8px;
 
