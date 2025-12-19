@@ -40,17 +40,49 @@
 /* ===== PILLS ===== */
 .hero-pills {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
+  margin: 18px 0 28px;
+  flex-wrap: wrap;
 }
 
 .pill {
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  position: center;
+  padding: 8px 16px;
+  font-size: 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
+  white-space: nowrap;
+
+  color: #cbd5ff;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(90,120,255,0.45);
+
+  box-shadow:
+    0 0 0 1px rgba(90,120,255,0.25),
+    0 0 18px rgba(90,120,255,0.35);
+
+  transition: all .25s ease;
+}
+
+.pill::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+
+  background: radial-gradient(
+    circle,
+    rgba(90,120,255,0.35),
+    transparent 70%
+  );
+
+  opacity: 0.6;
+  filter: blur(12px);
+  z-index: -1;
 }
 
 /* ===== CTA ===== */
