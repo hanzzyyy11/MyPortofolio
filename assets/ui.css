@@ -44,7 +44,7 @@ p {
 .subtitle::after {
   content: "";
   display: block;
-  width: 210px;
+  width: 220px;
   height: 4px;
   margin-top: 8px;
 
