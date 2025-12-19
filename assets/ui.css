@@ -58,15 +58,6 @@ p {
   box-shadow: 0 0 12px rgba(0,255,255,0.6);
 }
 
-*/ ===== LOGO RADIUS ===== */
-.logo img,
-.hero-logo img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 /* ===== GLASS UI CARD (GLOBAL) ===== */
 .glass {
   background: rgba(255,255,255,0.06);
