@@ -59,10 +59,10 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(90,120,255,0.45);
+  border: 1px solid rgba(0,255,255,0.2);
 
   box-shadow:
-    0 0 0 1px rgba(90,120,255,0.25),
+    0 0 0 1px rgba(0,255,255,0.6),
     0 0 18px rgba(90,120,255,0.35);
 
   transition: all .25s ease;
