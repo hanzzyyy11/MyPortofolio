@@ -11,12 +11,10 @@ body {
   display: flex;
   flex-direction: column;
 
-  /* PENTING: UI HARUS DI ATAS BACKGROUND */
   position: relative;
   z-index: 1;
 }
 
-/* SEMUA SECTION UI */
 section,
 header,
 footer {
@@ -24,7 +22,6 @@ footer {
   z-index: 2;
 }
 
-/* TEXT DEFAULT */
 p {
   color: #cbd5ff;
   line-height: 1.6;
@@ -48,7 +45,7 @@ p {
   content: "";
   display: block;
   width: 36px;
-  height: 2px;
+  height: 20px;
   margin-top: 8px;
 
   background: linear-gradient(
@@ -59,6 +56,15 @@ p {
 
   border-radius: 2px;
   box-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+
+*/ ===== LOGO RADIUS ===== */
+.logo img,
+.hero-logo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* ===== GLASS UI CARD (GLOBAL) ===== */
