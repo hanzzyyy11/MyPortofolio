@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+
+  .hero {
+    padding-top: 160px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+
+  .hero-cta {
+    grid-template-columns: repeat(2, 220px);
+    justify-content: center;
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    gap: 20px;
+  }
+}
