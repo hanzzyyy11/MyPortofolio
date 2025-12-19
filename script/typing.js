@@ -32,13 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
   typingLoop();
 
 });
-
-// ===== PARALLAX BACKGROUND =====
-const parallax = document.querySelector('.parallax-bg');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  // makin kecil angkanya makin halus
-  parallax.style.transform = `translateY(${scrollY * 0.15}px)`;
-});
