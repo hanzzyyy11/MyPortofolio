@@ -44,8 +44,8 @@ p {
 .subtitle::after {
   content: "";
   display: block;
-  width: 36px;
-  height: 20px;
+  width: 120px;
+  height: 6px;
   margin-top: 8px;
 
   background: linear-gradient(
