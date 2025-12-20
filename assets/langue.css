@@ -1,90 +1,98 @@
 /* ===== LANGUAGE SWITCH ===== */
 .lang-switch {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
-/* tombol utama (flag + arrow) */
+/* tombol utama (bendera + panah) */
 .lang-current {
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
-  border-radius: 10px;
+
+  border-radius: 12px;
   cursor: pointer;
 
-  color: #00ffff;
-  text-decoration: none;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,255,255,0.25);
+
+  box-shadow:
+    0 0 0 1px rgba(0,255,255,0.15),
+    0 0 16px rgba(0,255,255,0.25);
 }
 
 .lang-current img {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-}
-
-.lang-current .arrow {
-  font-size: 12px;
-  transition: transform 0.3s ease;
-}
-
-/* ===== DROPDOWN MENU ===== */
-.lang-menu {
-  position: absolute;
-  top: 120%;
-  left: 0;
-
-  min-width: 150px;
-  padding: 8px;
-
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12px);
-
-  border-radius: 12px;
-  border: 1px solid rgba(0,255,255,0.3);
-  box-shadow: 0 0 20px rgba(0,255,255,0.25);
-
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-8px);
-  transition: 0.3s ease;
-  z-index: 99;
-}
-
-/* item bahasa */
-.lang-menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 8px 10px;
-  border-radius: 8px;
-
-  color: #ffffff;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.lang-menu a img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
 }
 
-/* hover effect */
-.lang-menu a:hover {
-  background: rgba(0,255,255,0.15);
+.lang-current .arrow {
+  font-size: 12px;
+  color: #aefcff;
+  transition: transform .3s ease;
 }
 
-/* ===== SHOW MENU (CSS ONLY) ===== */
-.lang-switch:hover .lang-menu,
+/* ===== DROPDOWN MENU ===== */
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
+  width: 160px;
+  padding: 8px;
+
+  border-radius: 14px;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+  pointer-events: none;
+
+  background: rgba(10,25,35,0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0,255,255,0.25);
+
+  box-shadow:
+    0 0 0 1px rgba(0,255,255,0.15),
+    0 0 22px rgba(0,255,255,0.35);
+
+  transition: all .35s ease;
+  z-index: 999;
+}
+
+/* item */
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+
+  color: #ffffff;
+}
+
+.lang-menu a img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+/* hover item */
+.lang-menu a:hover {
+  background: rgba(0,255,255,0.12);
+}
+
+/* ===== AKTIF (PURE CSS CLICK) ===== */
 .lang-switch:focus-within .lang-menu {
   opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
-/* rotate arrow */
-.lang-switch:hover .arrow {
+.lang-switch:focus-within .arrow {
   transform: rotate(180deg);
 }
