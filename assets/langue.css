@@ -1,43 +1,49 @@
-/* ===== LANGUAGE SWITCH (PURE CSS) ===== */
+/* ===============================
+   LANGUAGE SWITCH (NAVBAR)
+================================ */
 
+/* wrapper */
 .lang-switch {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
-/* tombol utama (flag + arrow) */
+/* tombol flag di navbar (POLOS) */
 .lang-current {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 10px;
-  border-radius: 12px;
 
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  padding: 6px;
+  border-radius: 10px;
 
-  border: 1px solid rgba(0,255,255,0.25);
-  box-shadow:
-    0 0 10px rgba(0,255,255,0.35),
-    inset 0 0 8px rgba(0,255,255,0.1);
+  background: none;
+  border: none;
+  box-shadow: none;
 
   cursor: pointer;
 }
 
+/* flag kecil, seimbang hamburger */
 .lang-current img {
-  width: 20px;
-  height: 14px;
-  border-radius: 2px;
+  width: 22px;
+  height: 16px;
   object-fit: cover;
+  border-radius: 3px;
 }
 
+/* arrow kecil & clean */
 .lang-current .arrow {
-  color: #aefcff;
   font-size: 12px;
-  transition: transform 0.3s ease;
+  color: #9ffcff;
+  transform: translateY(1px);
 }
 
-/* ===== DROPDOWN MENU ===== */
+/* ===============================
+   DROPDOWN MENU (MIRIP MOBILE MENU)
+================================ */
+
 .lang-menu {
   position: absolute;
   top: calc(100% + 12px);
@@ -47,57 +53,62 @@
   flex-direction: column;
   gap: 10px;
 
+  min-width: 170px;
   padding: 14px;
   border-radius: 16px;
 
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.06);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   border: 2px solid rgba(0,255,255,0.25);
   box-shadow:
     0 0 25px rgba(0,255,255,0.45),
-    inset 0 0 15px rgba(0,255,255,0.15),
+    inset 0 0 12px rgba(0,255,255,0.15),
     0 25px 50px rgba(0,0,0,0.6);
 
   opacity: 0;
-  transform: translateY(-10px) scale(0.97);
+  transform: translateY(-10px) scale(0.98);
   pointer-events: none;
 
   transition: all 0.3s ease;
   z-index: 9999;
 }
 
-/* item bahasa */
-.lang-menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  padding: 10px 14px;
-  border-radius: 12px;
-
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-
-  border: 1px solid rgba(0,255,255,0.2);
-}
-
-.lang-menu img {
-  width: 22px;
-  height: 14px;
-  border-radius: 2px;
-}
-
-/* ===== AKTIF SAAT HOVER ===== */
+/* show dropdown (CSS ONLY) */
 .lang-switch:hover .lang-menu {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
-.lang-switch:hover .arrow {
-  transform: rotate(180deg);
+/* item language */
+.lang-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  border: 1px solid rgba(0,255,255,0.2);
+}
+
+/* hover */
+.lang-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* flag dropdown */
+.lang-menu img {
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: cover;
 }
