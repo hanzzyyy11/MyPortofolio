@@ -57,15 +57,26 @@ p {
   border-radius: 2px;
   box-shadow: 0 0 12px rgba(0,255,255,0.6);
 
-  /* ANIMASI */
+  /* INIT STATE */
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.8s ease;
+  opacity: 0;
 }
 
-/* aktif */
+/* AKTIF ANIMASI */
 .subtitle.animate::after {
-  transform: scaleX(1);
+  animation: lineGrow 0.9s ease-out forwards;
+}
+
+@keyframes lineGrow {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 /* ===== GLASS UI CARD (GLOBAL) ===== */
@@ -95,20 +106,4 @@ footer {
   font-size: 12px;
   color: #9fbfff;
   padding: 20px 16px;
-}
-
-@keyframes lineGrow {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
 }
