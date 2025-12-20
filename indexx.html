@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Name Is Farhan</title>
+
+  <!-- UI / BASE -->
+  <link rel="stylesheet" href="assets/ui.css">
+
+  <!-- BACKGROUND -->
+  <link rel="stylesheet" href="assets/background.css">
+
+  <!-- NAVBAR -->
+  <link rel="stylesheet" href="assets/navbar.css">
+  <link rel="stylesheet" href="assets/hamburger.css">
+
+  <!-- HERO -->
+  <link rel="stylesheet" href="assets/hero.css">
+
+  <!-- STATS -->
+  <link rel="stylesheet" href="assets/stats.css">
+
+  <!-- FOOTER -->
+  <link rel="stylesheet" href="assets/footer.css">
+
+  <!-- LOADER -->
+  <link rel="stylesheet" href="assets/loader.css">
+
+  <!-- LANGUE -->
+  <link rel="stylesheet" href="assets/langue.css">
+
+  <!-- DESKTOP OVERRIDE -->
+  <link rel="stylesheet" href="assets/desktop.css">
+</head>
+
+<body>
+
+<canvas id="bg-particles"></canvas>
+<div class="parallax-bg"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar floating-nav">
+<div class="nav-left">
+  <div class="lang-switch">
+  <a href="#" class="lang-current">
+    <img src="https://flagcdn.com/w40/id.png" alt="ID">
+    <span class="arrow">▾</span>
+  </a>
+
+  <div class="lang-menu">
+    <a href="index.html">
+      <img src="https://flagcdn.com/w40/id.png"> Indonesia
+    </a>
+    <a href="index-en.html">
+      <img src="https://flagcdn.com/w40/gb.png"> English
+    </a>
+  </div>
+</div>
+
+  <div class="logo-text">M Farhan</div>
+</div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="mobile-menu">
+  <a href="index.html" class="menu-item active">Home</a>
+  <a href="about.html" class="menu-item">About</a>
+  <a href="project.html" class="menu-item">Project</a>
+  <a href="contact.html" class="menu-item">Contact</a>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-head">
+    <div class="hero-logo">
+      <img src="images/logo.svg" alt="Logo">
+    </div>
+
+    <h1>
+      <span class="subtitle">hello - web developer</span><br>
+      <span>C</span><span id="typing"></span>
+    </h1>
+  </div>
+
+  <p>
+    Saya menyukai dunia digital, logika di balik sistem, dan bagaimana sesuatu bekerja secara tersembunyi. Rasa penasaran membuat saya terus belajar, mencoba hal baru, dan berkembang dari proses ke proses.
+  </p>
+
+  <div class="hero-pills">
+    <span class="pill">Ramah😚</span>
+    <span class="pill">Rajin🗿</span>
+    <span class="pill">Ceria😍</span>
+    <span class="pill">Baik😊</span>
+  </div>
+
+  <div class="hero-cta">
+    <a href="#" class="cta-card">Profil</a>
+    <a href="#" class="cta-card">Sosmed</a>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="stat">
+    <h2>15 Tahun</h2>
+    <p>Berusia</p>
+  </div>
+  <div class="stat"><h2>...</h2><p>...</p></div>
+  <div class="stat"><h2>...</h2><p>...</p></div>
+  <div class="stat"><h2>...</h2><p>...</p></div>
+</section>
+
+<footer>
+  © 2025 Website Portofolio. All rights reserved.
+</footer>
+
+<!-- ===== JS (PALING BAWAH) ===== -->
+<script src="script/mobilemenu.js"></script>
+<script src="script/canvas.js"></script>
+<script src="script/typing.js"></script>
+<script src="script/subtitleline.js"></script>
+
+</body>
+</html>
