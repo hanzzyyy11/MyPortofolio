@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== TYPING EFFECT ===== */
-  const text = "Han.";
+  const text = "all Me Han.";
   const typingEl = document.getElementById("typing");
 
   let index = 0;
