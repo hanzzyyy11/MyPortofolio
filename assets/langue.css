@@ -27,8 +27,8 @@
 
 /* flag kecil, seimbang hamburger */
 .lang-current img {
-  width: 22px;
-  height: 16px;
+  width: 28px;
+  height: 20px;
   object-fit: cover;
   border-radius: 3px;
 }
