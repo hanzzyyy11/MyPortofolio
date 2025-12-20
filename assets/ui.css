@@ -47,6 +47,7 @@ p {
   width: 220px;
   height: 4px;
   margin-top: 8px;
+  position: center;
 
   background: linear-gradient(
     90deg,
