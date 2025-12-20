@@ -2,20 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const subtitles = document.querySelectorAll(".subtitle");
 
   const observer = new IntersectionObserver(
-    entries => {
+    (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove("animate");
-          
-          // reset biar bisa animasi ulang
-          void entry.target.offsetWidth;
-
           entry.target.classList.add("animate");
+        } else {
+          // hapus biar bisa animasi ulang pas masuk lagi
+          entry.target.classList.remove("animate");
         }
       });
     },
     {
-      threshold: 0.6
+      threshold: 0.6 // 60% kelihatan baru trigger
     }
   );
 
