@@ -44,19 +44,25 @@ p {
 .subtitle::after {
   content: "";
   display: block;
+
   width: 220px;
   height: 4px;
   margin-top: 8px;
-  position: center;
 
   background: linear-gradient(
     90deg,
+    rgba(0,255,255,0.2),
     #00ffff,
     rgba(0,255,255,0.2)
   );
 
   border-radius: 2px;
   box-shadow: 0 0 12px rgba(0,255,255,0.6);
+
+  /* === ANIMATION CORE === */
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: lineGrow 1.6s ease-in-out infinite;
 }
 
 /* ===== GLASS UI CARD (GLOBAL) ===== */
@@ -86,4 +92,20 @@ footer {
   font-size: 12px;
   color: #9fbfff;
   padding: 20px 16px;
+}
+
+@keyframes lineGrow {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
